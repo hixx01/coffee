@@ -1,0 +1,81 @@
+//  关于我们
+
+.iconfont{
+  font-family:"iconfont" !important;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.002rem;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: .2rem;
+  color: #8a8a8a;
+}
+
+#m-aboutUs {
+  position: relative;
+  width:7.5rem;
+  height: 12rem;
+  background:url("../img/aboutUs/bg.jpg");
+  background:url("../img/aboutUs/bg.jpg");
+  -webkit-background-size:100% 100%;
+  background-size: 100% 100%;
+  .header {
+    display: flex;
+    height: 3rem;
+    padding-top:.51rem;
+    padding-left: 2.54rem;
+    .logo{
+      width:2.35rem;
+      height:2.35rem;
+    }
+  }
+  //选项列表（伸展）
+  #sel-list{
+    .list{
+      position: relative;
+      display: block;
+      height: .95rem;
+      line-height: .95rem;
+      padding-left: .29rem;
+      border-bottom: 0.01rem solid #e4e4e4;
+      font-size: .3rem;
+      color: #666;
+      background-color: #fff;
+      .shrink, .spread {
+        position: absolute;
+        right: .52rem;
+        top: 0.08rem;
+        font-size: .2rem;
+      }
+      .spread{
+        display: none;
+      }
+    }
+    .text{
+      display: none;
+      height: 1.79rem;
+      padding: .2rem .27rem 0 .29rem;
+      padding-left:.29rem;
+      border-bottom: 0.01rem solid #e4e4e4;
+      line-height: .36rem;
+      font-size: .23rem;
+      color: #b2b1af;
+      background-color: #fff;
+    }
+  }
+  .footer{
+    position:absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding-top:2.5rem;
+    height:3.87rem;
+    text-align: center;
+    p{
+      text-align: center;
+      height: 1.41rem;
+      font-size: .26rem;
+      line-height:.36rem;
+      color: #9a9a9a;
+    }
+  }
+}

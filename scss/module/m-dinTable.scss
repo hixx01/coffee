@@ -1,0 +1,344 @@
+//  餐桌
+
+#m-dinTbe {
+  width: 7.5rem;
+  background-image: url("../img/dinTable/bg-body.jpg");
+  background-size: 100% 100%;
+  padding-top: .2rem;
+  font-size: .3rem;
+  #dinTable-body {
+    padding-bottom: 2rem;
+    .iconfont{
+      font-family:"iconfont" !important;
+      font-size:16px;font-style:normal;
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-stroke-width: 0.2px;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    .img-sequence {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .now-sequence {
+        font-size: .7rem;
+        color: #81615f;
+      }
+      .img-count {
+        font-size: .7rem;
+        color: #81615f;
+      }
+    }
+    .goods-img {
+      display: flex;
+      justify-content: center;
+      padding-bottom: .35rem;
+      .goodsImage-div {
+        width: 4.5rem;
+        height: 7.0rem;
+        overflow: hidden;
+        position: relative;
+        .goodsImage-ul {
+          height: 7.0rem;
+          display: flex;
+          position: absolute;left:0;top:0;
+          li {
+            width: 4.5rem;
+            height: 7.0rem;
+            a {
+              diaplay: block;
+              width: 4.5rem;
+              height: 7.0rem;
+              img {
+                width: 4.5rem;
+                height: 7.0rem;
+              }
+            }
+          }
+        }
+      }
+    }
+    .goods-name {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: .35rem;
+      .iconfont {
+        color: #493425;
+        font-size: .8rem;
+      }
+      .goodsName-span {
+        font-size: .5rem;
+        color: #493425;
+      }
+    }
+    .goods-price {
+      padding-left: 1.6rem;
+      padding-bottom: .2rem;
+      .goodsPrice-describe {
+        font-size: .4rem;
+        color: #493425;
+      }
+      .iconfont {
+        font-size: .5rem;
+        color: #d81e06;
+      }
+      .goodsPrice-value {
+        font-size: .5rem;
+        color: #e24b44;
+      }
+    }
+    .goods-count {
+      padding-left: 1.6rem;
+      .goodsCount-describe {
+        font-size: .4rem;
+        color: #493425;
+      }
+      .iconfont {
+        font-size: .5rem;
+        color: #000000;
+      }
+      .goodsCount-value {
+        font-size: .5rem;
+        color: #e24b44;
+        padding-left: .2rem;
+        padding-right: .2rem;
+      }
+    }
+    .settlement {
+      width: 1.5rem;
+      height: .7rem;
+      line-height: .7rem;
+      text-align: center;
+      background-color: #fd7c24;
+      border-radius: .3rem;
+      position: fixed;
+      right: .5rem;
+      bottom: 1.5rem;
+      span {
+        font-size: .4rem;
+        color: #fefcfa;
+      }
+    }
+    .left {
+      width: 1.1rem;
+      height: 2rem;
+      background-color: transparent;
+      font-size: 1rem;
+      color: #81615f;
+      text-align: left;
+      position: absolute;
+      left: .1rem;
+      top: 35%;
+    }
+    .right {
+      width: 1.1rem;
+      height: 2rem;
+      background-color: transparent;
+      font-size: 1rem;
+      color: #81615f;
+      text-align: right;
+      position: absolute;
+      right: .1rem;
+      top: 35%;
+    }
+    .overlap {
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      opacity: 0.5;
+      position: fixed;
+      left: 0;
+      top: 0;
+      display: none;
+    }
+    .paydetail {
+      width: 100%;
+      height: 4rem;
+      background-color: #fff;
+      position: fixed;
+      left: 0;
+      bottom: -4rem;
+      z-index: 5;
+      .all {
+        border-bottom: 0.01rem solid #e0e0e0;
+        display: flex;
+        height: .65rem;
+        justify-content: space-around;
+        align-items: center;
+        .all-price, .all-count {
+          font-size: .3rem;
+        }
+      }
+      .goodsdetail {
+        height: 2.5rem;
+        overflow-y: scroll;
+        li {
+          height: .65rem;
+          padding-left: .5rem;
+          padding-right: .5rem;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color: #fbebf0;
+          span {
+            font-size: .3rem;
+          }
+          .iconfont {
+            color: #a8c001;
+            font-size: .4rem;
+          }
+        }
+      }
+      .paybtn {
+        width: 3rem;
+        height: .8rem;
+        position: relative;
+        left: 50%;
+        margin-left: -1.5rem;
+        background-color: #ff6805;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 1rem;
+        span {
+          font-size: .4rem;
+          color: #fff;
+        }
+      }
+    }
+    .account {
+      width: 100%;
+      height: 4rem;
+      background-color: #fff;
+      position: fixed;
+      left: 0;
+      bottom: -4rem;
+      z-index: 10;
+      .needpay {
+        border-bottom: 0.01rem solid #e0e0e0;
+        height: .65rem;
+        line-height: .65rem;
+        padding-left: .2rem;
+        .needpay-span {
+          font-size: .4rem;
+        }
+      }
+      .choose {
+        height: .65rem;
+        line-height: .65rem;
+        padding-left: .2rem;
+        span {
+          font-size: .3rem;
+        }
+      }
+      .wechat {
+        height: .65rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .left {
+          display: flex;
+          .iconfont {
+            font-size: .5rem;
+            color: #a9bf02;
+            padding-left: .3rem;
+            padding-right: .3rem;
+          }
+          span {
+            font-size: .3rem;
+            white-space: nowrap;
+          }
+        }
+        .right {
+          display: flex;
+          align-items: flex-start;
+          .icon-right {
+            font-size: .5rem;
+            color: #a9bf02;
+            padding-left: .3rem;
+            padding-right: .3rem;
+          }
+        }
+      }
+      .surebtn {
+        width: 3rem;
+        height: .8rem;
+        position: relative;
+        left: 50%;
+        margin-left: -1.5rem;
+        bottom: -1rem;
+        background-color: #ff6805;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 1rem;
+        span {
+          font-size: .4rem;
+          color: #fff;
+        }
+      }
+    }
+    .success {
+      width: 100%;
+      height: 4rem;
+      background-color: #fff;
+      position: fixed;
+      left: 0;
+      bottom: -4rem;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .iconfont, span {
+        font-size: .5rem;
+        color: #a9bf02;
+        padding-left: .1rem;
+        padding-right: .1rem;
+      }
+    }
+  }
+  .empty {
+    width: 100%;
+    height: 120%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url("../img/dinTable/bg-body.jpg");
+    background-size: 100% 100%;
+    padding-top: 2rem;
+    display: none;
+    .icon-cart {
+      display: flex;
+      justify-content: center;
+      .iconfont {
+        font-size: 5rem;
+        color: #d91c06;
+      }
+    }
+    .word1 {
+      display: flex;
+      justify-content: center;
+      line-height: 1rem;
+      span {
+        font-size: .5rem;
+      }
+    }
+    .word2 {
+      display: flex;
+      justify-content: center;
+      line-height: 1rem;
+      span {
+        font-size: .3rem;
+        color: #2e2e2d;
+      }
+    }
+  }
+  #m-nav {
+    li {
+      list-style: none;
+      .icon-dinTable {
+        color: #d91c06;
+      }
+    }
+  }
+}

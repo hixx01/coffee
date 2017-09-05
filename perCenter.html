@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html">
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <script>
+        !function(e,t,i,r){function n(){var e=document.querySelector("head"),t=document.createElement("div");t.style.width="1rem",t.style.display="none",e.appendChild(t);var i=parseFloat(window.getComputedStyle(t,null).width);return e.removeChild(t),i}function a(){var r=d.getBoundingClientRect().width;r/c>768&&(r=768*c);var n=r/e*t;if(!i){var a=p/16;n/=a}d.style.fontSize=n+"px",v.rem=n}var m,o=window,l=o.document,d=l.documentElement,s=l.querySelector('meta[name="viewport"]'),c=0,u=0,p=n(),v={};if(s){var h=s.getAttribute("content").match(/initial\-scale=([\d\.]+)/);h&&(console.warn("将根据已有的meta标签来设置缩放比例"),u=parseFloat(h[1]),c=parseInt(1/u))}if(!c&&!u){var f=o.devicePixelRatio;r?(c=f>=3&&(!c||c>=3)?3:f>=2&&(!c||c>=2)?2:1,u=1/c):(c=1,u=1/c)}if(d.setAttribute("data-dpr",c),!s)if(s=l.createElement("meta"),s.setAttribute("name","viewport"),s.setAttribute("content","width=device-width, initial-scale="+u+", maximum-scale="+u+", minimum-scale="+u+", user-scalable=no"),d.firstElementChild)d.firstElementChild.appendChild(s);else{var w=l.createElement("div");w.appendChild(s),l.write(w.innerHTML)}o.addEventListener("resize",function(){clearTimeout(m),m=setTimeout(a,300)},!1),o.addEventListener("pageshow",function(e){e.persisted&&(clearTimeout(m),m=setTimeout(a,300))},!1),a(),v.dpr=c,v.refreshRem=a,v.rem2px=function(e){var t=parseFloat(e)*this.rem;return"string"==typeof e&&e.match(/rem$/)&&(t+="px"),t},v.px2rem=function(e){var t=parseFloat(e)/this.rem;return"string"==typeof e&&e.match(/px$/)&&(t+="rem"),t},window.remmoka=v}
+        (750,100,!0,!0);
+        /*
+         * designWidth, oneRem2Px, resetScaleFontSizeToDefault, useScaleFix1pxTooBold
+         * @param designWidth 设计稿宽度 一般来说iPhone6是750 如果缩小就变成了375px
+         * @param oneRem2Px 1rem对应多少px
+         * @param resetScaleFontSizeToDefault 是否重置Android因为系统放大或者缩小字体带来的影响
+         * @param useScaleFix1pxTooBold 是否通过meta标签的scale处理1px过于粗的问题
+         * */
+    </script>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <title>我的</title>
+</head>
+<body>
+<div id="m-perCer">
+    <div id="wrapInner">
+        <!--个人信息整体栏-->
+    </div>
+    <!--尾部导航-->
+    <div id="m-nav">
+        <div class="nav">
+            <li>
+                <a href="../../index.html">
+                    <i class="index-img1">&#xe737;</i>
+                    <p>首页</p>
+                </a>
+            </li>
+            <li>
+                <a href="../../classify.html">
+                    <i class="index-img2">&#xe603;</i>
+                    <p>发现</p>
+                </a>
+            </li>
+            <li>
+                <a href="../../dinTable.html">
+                    <i class="index-img3">&#xe629;</i>
+                    <p>餐桌</p>
+                </a>
+            </li>
+            <li id="my">
+                <a href="../../perCenter.html">
+                    <i class="index-img4">&#xe707;</i>
+                    <p>我的</p>
+                </a>
+            </li>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="./js/lib/jquery.min.js"></script>
+<script src="js/lib/handlebars-v4.0.10.js"></script>
+<script id="card-template" type="text/x-handlebars-template">
+    {{#userInfo}}
+    <div class="user-info">
+        <!--个人信息整理蓝中的，信息部分-->
+        <div id="info">
+            <img src="{{headUrl}}" class="head-image">
+            <div class="level">
+                <img src="{{levelUrl}}" class="levelUrl">
+            </div>
+            <div class="detail-image">
+                <p class="nickname">{{name}}</p>
+                <div class="score-discount">
+                    <p class="score-text"><span>{{score}}</span>积分</p>
+                    <p class="discount">可享<span>9</span>折</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/userInfo}}
+    <!--中间部分的6个跳转-->
+    <ul class="sel-list">
+        <li class="collect">
+            <a href="{{linkUrl collectHerfUrl userInfo/id}}">
+                <i class="colle-img iconfont">&#xe624;</i>
+                我收藏的
+            </a>
+        </li>
+        <li class="notice">
+            <a href="{{linkUrl noticeHerfUrl userInfo/id}}">
+                <i class="notice-img iconfont">&#xe62d;</i>
+                动态通知
+                <div class="hot-wrap">
+                    {{#if isNotice}}
+                    <p class="hot"></p>
+                    {{/if}}
+                </div>
+            </a>
+        </li>
+        <li class="comment">
+            <a href="{{linkUrl commentHerfUrl userInfo/id}}">
+                <i class="comment-img iconfont">&#xe69e;</i>
+                等待评价
+            </a>
+        </li>
+        <li class="coupons">
+            <a href="{{linkUrl couponHerfUrl userInfo/id}}">
+                <i class="coupons-img iconfont">&#xe639;</i>
+                优惠卡券
+            </a>
+        </li>
+        <li class="score">
+            <a href="{{linkUrl scoreHerfUrl userInfo/id}}">
+                <i class="score-img iconfont">&#xe60c;</i>
+                全部积分
+            </a>
+        </li>
+        <li class="about">
+            <a href="./aboutUs.html">
+                <i class="about-img iconfont">&#xe6f0;</i>
+                关于我们
+            </a>
+        </li>
+    </ul>
+
+</script>
+<script type="text/javascript" src="./js/module/perCenter.js"></script>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="content-type" content="text/html"><meta name="keywords" content=""><meta name="description" content=""><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><script>!function(e,t,i,r){function n(){var r=l.getBoundingClientRect().width;r/s>768&&(r=768*s);var n=r/e*t;i||(n/=u/16),l.style.fontSize=n+"px",p.rem=n}var a,m=window,o=m.document,l=o.documentElement,d=o.querySelector('meta[name="viewport"]'),s=0,c=0,u=function(){var e=document.querySelector("head"),t=document.createElement("div");t.style.width="1rem",t.style.display="none",e.appendChild(t);var i=parseFloat(window.getComputedStyle(t,null).width);return e.removeChild(t),i}(),p={};if(d){var h=d.getAttribute("content").match(/initial\-scale=([\d\.]+)/);h&&(console.warn("将根据已有的meta标签来设置缩放比例"),c=parseFloat(h[1]),s=parseInt(1/c))}if(!s&&!c){var v=m.devicePixelRatio;c=1/(s=v>=3&&(!s||s>=3)?3:v>=2&&(!s||s>=2)?2:1)}if(l.setAttribute("data-dpr",s),!d)if((d=o.createElement("meta")).setAttribute("name","viewport"),d.setAttribute("content","width=device-width, initial-scale="+c+", maximum-scale="+c+", minimum-scale="+c+", user-scalable=no"),l.firstElementChild)l.firstElementChild.appendChild(d);else{var f=o.createElement("div");f.appendChild(d),o.write(f.innerHTML)}m.addEventListener("resize",function(){clearTimeout(a),a=setTimeout(n,300)},!1),m.addEventListener("pageshow",function(e){e.persisted&&(clearTimeout(a),a=setTimeout(n,300))},!1),n(),p.dpr=s,p.refreshRem=n,p.rem2px=function(e){var t=parseFloat(e)*this.rem;return"string"==typeof e&&e.match(/rem$/)&&(t+="px"),t},p.px2rem=function(e){var t=parseFloat(e)/this.rem;return"string"==typeof e&&e.match(/px$/)&&(t+="rem"),t},window.remmoka=p}(750,100,!0)</script><link rel="stylesheet" type="text/css" href="./css/style.css"><title>我的</title></head><body><div id="m-perCer"><div id="wrapInner"></div><div id="m-nav"><div class="nav"><li><a href="index.html"><i class="index-img1">&#xe67e;</i><p>首页</p></a></li><li><a href="classify.html"><i class="index-img2">&#xe604;</i><p>发现</p></a></li><li><a href="dinTable.html"><i class="index-img3">&#xe629;</i><p>餐桌</p></a></li><li><a href="#"><i class="index-img4">&#xe707;</i><p>我的</p></a></li></div></div></div></body><script type="text/javascript" src="./js/lib/jquery.min.js"></script><script src="js/lib/handlebars-v4.0.10.js"></script><script id="card-template" type="text/x-handlebars-template">{{#each data}}
+    <div class="user-info">
+        <!--个人信息整理蓝中的，信息部分-->
+        <div id="info">
+            <img src="{{headUrl}}" class="head-image">
+            <div class="level">
+                <img src="{{levelUrl}}" class="levelUrl">
+            </div>
+            <div class="detail-image">
+                <p class="nickname">{{name}}</p>
+                <div class="score-discount">
+                    <p class="score-text"><span>{{score}}</span>积分</p>
+                    <p class="discount">可享<span>{{discount}}</span>折</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--中间部分的6个跳转-->
+    <ul class="sel-list">
+        <li class="collect">
+            <a href="collectList.html">
+                <i class="colle-img iconfont">&#xe624;</i>
+                我收藏的
+            </a>
+        </li>
+        <li class="notice">
+            <a href="./newsList.html">
+                <i class="notice-img iconfont">&#xe6a4;</i>
+                动态通知
+                <div class="hot-wrap">
+                    {{#if isNotice}}
+                    <p class="hot"></p>
+                    {{/if}}
+                </div>
+            </a>
+        </li>
+        <li class="comment">
+            <a href="messageList.html">
+                <i class="comment-img iconfont">&#xe69e;</i>
+                等待评价
+            </a>
+        </li>
+        <li class="coupons">
+            <a href="#">
+                <i class="coupons-img iconfont">&#xe639;</i>
+                优惠卡券
+            </a>
+        </li>
+        <li class="score">
+            <a href="#">
+                <i class="score-img iconfont">&#xe647;</i>
+                全部积分
+            </a>
+        </li>
+        <li class="about">
+            <a href="aboutUs.html">
+                <i class="about-img iconfont">&#xe65a;</i>
+                关于我们
+            </a>
+        </li>
+    </ul>
+    {{/each}}</script><script type="text/javascript" src="./js/module/perCenter.js"></script></html>

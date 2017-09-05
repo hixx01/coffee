@@ -1,0 +1,154 @@
+//我的
+
+
+.iconfont{
+  font-family:"iconfont" !important;
+  font-style:normal;
+}
+
+*{
+  list-style: none;
+  margin: 0;
+  padding:0;
+}
+
+#m-perCer {
+  width:7.5rem;
+  padding-top:1.27rem;
+  height: 13rem;
+  background:url(../img/perCenter/bg.jpg);
+  -webkit-background-size:100% 100% ;
+  .user-info{
+    height:1.59rem;
+    padding-left:.29rem;
+    background-color: #fff;
+    #info{
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      width:5.94rem;
+      padding-top:0.08rem;
+      .head-image{
+        width:1.31rem;
+        height:1.31rem;
+        border-radius: 50%;
+        margin-right: .37rem;
+      }
+      .level{
+        position: absolute;
+        left: .97rem;
+        top: .94rem;
+        z-index: 5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width:.34rem;
+        height:.34rem;
+        border:0.01rem solid #c0c0c0;
+        border-radius: 50%;
+        background-color: #fff;
+        .levelUrl{
+          width: .22rem;
+          height: .22rem;
+        }
+      }
+      .detail-image{
+        width:4.27rem;
+        .nickname{
+          height:.7rem;
+          padding-top: .2rem;
+          font-size:.33rem;
+          color:#1a1a1a;
+        }
+        .score-discount{
+          display: flex;
+          height:.45rem;
+          font-size:.3rem;
+          color:#1a1a1a;
+          .discount{
+            padding-left: .28rem;
+            & span{
+              text-shadow: 3px 3px 10px #fefcc9;
+              color: #f9a31a;
+            }
+          }
+        }
+      }
+    }
+  }
+  .sel-list{
+    margin-top: .38rem;
+    .notice,.comment,.coupons{
+      border-bottom: 0.01rem solid #b5b5b5;
+    }
+    .collect,.score{
+      margin-bottom: .4rem;
+    }
+    .notice {
+      position: relative;
+      .hot{
+        position: absolute;
+        left: 2.71rem;
+        top: .4rem;
+        width: .19rem;
+        height: .19rem;
+        border-radius: 50%;
+        background-color:#e24b44;
+      }
+    }
+    .colle-img,.notice-img,.comment-img,.coupons-img,.score-img,.about-img{
+      font-size:.52rem;
+      padding-right: .35rem;
+    }
+    .colle-img{
+      background:-webkit-linear-gradient(left,#E23E40,#f2a2bb 25%,#E22016 50%,#cfc6c8 75%,#E23E40 100%);
+      -webkit-background-clip:text;/*只有webkit内核支持text的剪切模式*/
+      color:transparent;
+    }
+    .notice-img,.score-img{
+      background:-webkit-linear-gradient(left,#1B9DC7,#46C4C7 25%,#1B9DC7 50%,#46C4C7 75%,#1B9DC7 100%);
+      -webkit-background-clip:text;/*只有webkit内核支持text的剪切模式*/
+      color:transparent;
+    }
+    .comment-img,.coupons-img,.about-img{
+      background:-webkit-linear-gradient(left,#1B9DC7,#46C4C7 25%,#78ACC7 50%,#9FA8C7 75%,#51C7C6 100%);
+      -webkit-background-clip:text;/*只有webkit内核支持text的剪切模式*/
+      color:transparent;
+    }
+    & a{
+      display: block;
+      height:.94rem;
+      padding-left:.29rem;
+      line-height: .94rem;
+      font-size:.3rem;
+      color: #616161;
+      background-color: #fff;
+    }
+  }
+
+
+  /*底部导航栏*/
+  //.nav{
+  //  width:7.5rem;
+  //  height:1rem;
+  //  background:#f1eedb;
+  //  position:fixed;
+  //  bottom:0;
+  //  display:flex;
+  //  justify-content:space-around;
+  //  align-items:center;
+  //
+  //  a{
+  //    display:inline-block;
+  //    font-size:.18rem;
+  //    width:0.75rem;
+  //    text-align:center;
+  //    -webkit-tap-highlight-color:rgba(255,255,255,0);
+  //    .index-img1,.index-img2,.index-img3,.index-img4{
+  //      font-size:.6rem;
+  //      font-family:iconfont;
+  //      font-style:normal;
+  //    }
+  //  }
+  //}
+}

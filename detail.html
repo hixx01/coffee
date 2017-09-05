@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html">
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <script>
+        !function (e, t, i, r) {
+            function n() {
+                var e = document.querySelector("head"), t = document.createElement("div");
+                t.style.width = "1rem", t.style.display = "none", e.appendChild(t);
+                var i = parseFloat(window.getComputedStyle(t, null).width);
+                return e.removeChild(t), i
+            }
+
+            function a() {
+                var r = d.getBoundingClientRect().width;
+                r / c > 768 && (r = 768 * c);
+                var n = r / e * t;
+                if (!i) {
+                    var a = p / 16;
+                    n /= a
+                }
+                d.style.fontSize = n + "px", v.rem = n
+            }
+
+            var m, o = window, l = o.document, d = l.documentElement, s = l.querySelector('meta[name="viewport"]'), c = 0, u = 0, p = n(), v = {};
+            if (s) {
+                var h = s.getAttribute("content").match(/initial\-scale=([\d\.]+)/);
+                h && (console.warn("将根据已有的meta标签来设置缩放比例"), u = parseFloat(h[1]), c = parseInt(1 / u))
+            }
+            if (!c && !u) {
+                var f = o.devicePixelRatio;
+                r ? (c = f >= 3 && (!c || c >= 3) ? 3 : f >= 2 && (!c || c >= 2) ? 2 : 1, u = 1 / c) : (c = 1, u = 1 / c)
+            }
+            if (d.setAttribute("data-dpr", c), !s)if (s = l.createElement("meta"), s.setAttribute("name", "viewport"), s.setAttribute("content", "width=device-width, initial-scale=" + u + ", maximum-scale=" + u + ", minimum-scale=" + u + ", user-scalable=no"), d.firstElementChild)d.firstElementChild.appendChild(s); else {
+                var w = l.createElement("div");
+                w.appendChild(s), l.write(w.innerHTML)
+            }
+            o.addEventListener("resize", function () {
+                clearTimeout(m), m = setTimeout(a, 300)
+            }, !1), o.addEventListener("pageshow", function (e) {
+                e.persisted && (clearTimeout(m), m = setTimeout(a, 300))
+            }, !1), a(), v.dpr = c, v.refreshRem = a, v.rem2px = function (e) {
+                var t = parseFloat(e) * this.rem;
+                return "string" == typeof e && e.match(/rem$/) && (t += "px"), t
+            }, v.px2rem = function (e) {
+                var t = parseFloat(e) / this.rem;
+                return "string" == typeof e && e.match(/px$/) && (t += "rem"), t
+            }, window.remmoka = v
+        }
+        (750, 100, !0, !0);
+        /*
+         * designWidth, oneRem2Px, resetScaleFontSizeToDefault, useScaleFix1pxTooBold
+         * @param designWidth 设计稿宽度 一般来说iPhone6是750 如果缩小就变成了375px
+         * @param oneRem2Px 1rem对应多少px
+         * @param resetScaleFontSizeToDefault 是否重置Android因为系统放大或者缩小字体带来的影响
+         * @param useScaleFix1pxTooBold 是否通过meta标签的scale处理1px过于粗的问题
+         * */
+    </script>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <title>详情</title>
+</head>
+<body>
+<div id="m-detail">
+
+    <div class="sec-top" id="sec-top">
+
+    </div>
+
+
+    <div class="sec-bottom" id="sec-bottom">
+
+
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="./js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="./js/lib/velocity.min.js"></script>
+<script type="text/javascript" src="./js/lib/handlebars-v4.0.10.js"></script>
+<script type="text/javascript" src="./js/module/detail.js"></script>
+<script id="goods-template" type="text/x-handlebars-template">
+
+    <div class="goodsImg">
+        <img src="{{goodsImage}}" alt="">
+    </div>
+    <div class="goodsIntro">
+        <div>
+    <span><p>{{name}} |</p>
+    <p><i class="goodsPriceIcon">&#xe605;</i>28</p>
+    </span>
+        </div>
+        <div>
+            <span>{{sales}}人购买</span>
+            <a href="messageList.html?goodId={{id}}">
+                <i class="messageBoard">&#xe643;</i>
+                <p>留言板</p>
+                <p>{{commentNum}}</p>
+            </a>
+        </div>
+    </div>
+    <div class="line"></div>
+
+</script>
+<script id="three-template" type="text/x-handlebars-template">
+    <div class="goodsDetail">
+    <span>详情
+    <i class="detailIcon">&#xe64a;</i>
+    </span>
+        <div class="detailImage" id="detailImg">
+            {{#each this}}
+            <img src="{{detailImgUrl}}" alt="">
+            {{/each}}
+        </div>
+    </div>
+    <div class="buy">
+        <div>
+            <a href="dinTable.html">
+                <i class="buyCarIcon">&#xe604;</i>
+            </a>
+            <a href="#" class="buyCollect">
+                <i class="buyCollectIcon">&#xe636;</i>
+            </a>
+        </div>
+        <div>
+            <a href="#" class="addCar">加入购物车</a>
+            <a href="#" class="buyNow">立即购买</a>
+        </div>
+    </div>
+    <div class="hide"></div>
+    <div class="goodsSize">
+        <p>规格</p>
+
+        <div class="size">
+            <span class="big checked">大</span>
+            <span class="mid">中</span>
+            <span class="small">小</span>
+        </div>
+
+        <div class="buyCount">
+            <p>购买数量:</p>
+            <i class="minusIcon">&#xe752;</i>
+            <span class="count">1</span>
+            <i class="addIcon">&#xe634;</i>
+        </div>
+        <a href="#" class="ensure" id="ensure1">
+            <span>确定</span>
+        </a>
+        <a href="dinTable.html" class="ensure" id="ensure2">
+            <span>确定</span>
+        </a>
+    </div>
+</script>
+</html>

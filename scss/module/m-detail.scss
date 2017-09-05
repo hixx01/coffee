@@ -1,0 +1,256 @@
+//  详情
+
+#m-detail {
+  a{
+    -webkit-tap-highlight-color:rgba(255,255,255,0);
+  }
+  width:7.5rem;
+  background:url("../img/detail/bg-img.png") repeat;
+  background-size:100% 100%;
+  .goodsImg{
+    display:flex;
+    width:100%;
+    img{
+      width:100%;
+      height:7.5rem;
+      margin-bottom:.2rem;
+    }
+  }
+
+  .goodsIntro{
+    width:7.5rem;
+    padding:0 .2rem 0 .2rem;
+
+
+    div:first-of-type{
+      span:first-of-type {
+        font-family:"微软雅黑";
+        font-size:.35rem;
+        height:.5rem;
+        line-height:.5rem;
+        display:flex;
+        color:#9f5856;
+
+        .goodsPriceIcon {
+          font-family:iconfont;
+          font-style:normal;
+          font-size:.4rem;
+          color:#c94b48;
+        }
+      }
+
+    }
+    div:last-of-type{
+      display:flex;
+      justify-content:space-between;
+      span{
+        display:flex;
+        height:.5rem;
+        font-size:.3rem;
+        color:#c2bcbc;
+      }
+      a {
+
+        display:flex;
+        font-size:.2rem;
+        .messageBoard {
+          font-family:iconfont;
+          font-size:.3rem;
+          font-style:normal;
+          color:#1296db;
+        }
+        p{
+          padding-top:.08rem;
+          font-size:.2rem;
+          line-height:.2rem;
+          &:last-of-type{
+            color:#ff4400;
+            font-weight:bold;
+          }
+        }
+      }
+    }
+
+  }
+  .line{
+    width:7.1rem;
+    margin-left:.2rem;
+    border-bottom:.04rem solid #c2bcbc;
+  }
+
+  .goodsDetail{
+    span {
+      font-size:.3rem;
+      padding-left:.2rem;
+      font-family:"微软雅黑";
+      display:flex;
+      padding-top:.3rem;
+      margin-bottom:.2rem;
+      .detailIcon {
+        font-family:iconfont;
+        font-size:.3rem;
+        font-style:normal;
+        color:#c00000;
+      }
+    }
+    .detailImage{
+
+      width:7.1rem;
+
+      margin-left:.2rem;
+      img{
+        width:7.1rem;
+        height:5rem;
+      }
+    }
+  }
+  .buy {
+    width:7.5rem;
+    height:1rem;
+    background:#fdfbfc;
+    position:fixed;
+    bottom:0;
+    display:flex;
+    //justify-content:space-around;
+    align-items:center;
+    a{
+      -webkit-tap-highlight-color:rgba(255,255,255,0);
+    }
+    div:first-of-type{
+      width:2.5rem;
+      height:1rem;
+      display:flex;
+      justify-content:space-around;
+      align-items:center;
+      .buyCollect {
+        position:relative;
+        display:block;
+        width:.7rem;
+        height:1.2rem;
+        -webkit-tap-highlight-color:rgba(255,255,255,0);
+      }
+      .buyCarIcon {
+        font-family:iconfont;
+        font-size:.8rem;
+        font-style:normal;
+        color:#d81e07;
+        -webkit-tap-highlight-color:rgba(255,255,255,0);
+      }
+      .buyCollectIcon {
+        font-family:iconfont;
+        font-size:0.7rem;
+        font-style:normal;
+        position:relative;
+        color:#71767f;
+      }
+    }
+
+    div:last-of-type {
+      width:5rem;
+      justify-content:flex-end;
+      display:flex;
+      .addCar {
+        width:2.6rem;
+        height:100%;
+        background:#ff9a02;
+        font-size:.3rem;
+        color:#fff;
+        font-family:"微软雅黑";
+        line-height:1rem;
+        text-align:center;
+        -webkit-tap-highlight-color:rgba(255,255,255,0);
+      }
+      .buyNow {
+        width:2.3rem;
+        height:100%;
+        background:#ff6805;
+        font-size:.3rem;
+        color:#fff;
+        font-family:"微软雅黑";
+        line-height:1rem;
+        text-align:center;
+        -webkit-tap-highlight-color:rgba(255,255,255,0);
+      }
+    }
+  }
+  .hide{
+    width:7.5rem;
+    height:8rem;
+    background:#323232;
+    opacity:0;
+    position:fixed;
+    top:0;
+    display:none;
+  }
+  .goodsSize{
+    width:7.5rem;
+    height:4.5rem;
+    background:#fff;
+    position:fixed;
+    bottom:-5rem;
+    //display:flex;
+    p{
+      font-size:.4rem;
+      font-family:"微软雅黑";
+      color:#2e2e2e;
+      padding:.3rem 0 0 .3rem;
+    }
+    .size{
+      padding-top:.3rem;
+      width:7.5rem;
+      height:1rem;
+      display:flex;
+
+
+      .big,.mid,.small{
+        width:1.5rem;
+        height:.5rem;
+        background:#eee;
+        border:.01rem solid #e0e0e0;
+        border-radius:.2rem;
+        font-size:.3rem;
+        font-family:"微软雅黑";
+        color:#000;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        margin-left:.3rem;
+      }
+      .checked{
+        background:#ff6805;
+        color:#fff;
+      }
+    }
+    .buyCount{
+      display:flex;
+      .count{
+        font-size:.5rem;
+        margin:0 .2rem;
+        padding:.2rem 0 0 .3rem;
+      }
+      .minusIcon,.addIcon{
+        font-family:iconfont;
+        font-style:normal;
+        font-size:.7rem;
+        color:#999;
+        padding:.1rem 0 0 .3rem;
+      }
+    }
+    .ensure{
+      position:absolute;
+      bottom:0;
+      width:7.5rem;
+      height:1rem;
+      background:#ff6805;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      span{
+        font-size:.35rem;
+        color:#fff;
+      }
+    }
+  }
+
+
+}

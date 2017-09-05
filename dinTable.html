@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html">
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <script>
+        !function(e,t,i,r){function n(){var e=document.querySelector("head"),t=document.createElement("div");t.style.width="1rem",t.style.display="none",e.appendChild(t);var i=parseFloat(window.getComputedStyle(t,null).width);return e.removeChild(t),i}function a(){var r=d.getBoundingClientRect().width;r/c>768&&(r=768*c);var n=r/e*t;if(!i){var a=p/16;n/=a}d.style.fontSize=n+"px",v.rem=n}var m,o=window,l=o.document,d=l.documentElement,s=l.querySelector('meta[name="viewport"]'),c=0,u=0,p=n(),v={};if(s){var h=s.getAttribute("content").match(/initial\-scale=([\d\.]+)/);h&&(console.warn("将根据已有的meta标签来设置缩放比例"),u=parseFloat(h[1]),c=parseInt(1/u))}if(!c&&!u){var f=o.devicePixelRatio;r?(c=f>=3&&(!c||c>=3)?3:f>=2&&(!c||c>=2)?2:1,u=1/c):(c=1,u=1/c)}if(d.setAttribute("data-dpr",c),!s)if(s=l.createElement("meta"),s.setAttribute("name","viewport"),s.setAttribute("content","width=device-width, initial-scale="+u+", maximum-scale="+u+", minimum-scale="+u+", user-scalable=no"),d.firstElementChild)d.firstElementChild.appendChild(s);else{var w=l.createElement("div");w.appendChild(s),l.write(w.innerHTML)}o.addEventListener("resize",function(){clearTimeout(m),m=setTimeout(a,300)},!1),o.addEventListener("pageshow",function(e){e.persisted&&(clearTimeout(m),m=setTimeout(a,300))},!1),a(),v.dpr=c,v.refreshRem=a,v.rem2px=function(e){var t=parseFloat(e)*this.rem;return"string"==typeof e&&e.match(/rem$/)&&(t+="px"),t},v.px2rem=function(e){var t=parseFloat(e)/this.rem;return"string"==typeof e&&e.match(/px$/)&&(t+="rem"),t},window.remmoka=v}
+        (750,100,!0,!0);
+        /*
+         * designWidth, oneRem2Px, resetScaleFontSizeToDefault, useScaleFix1pxTooBold
+         * @param designWidth 设计稿宽度 一般来说iPhone6是750 如果缩小就变成了375px
+         * @param oneRem2Px 1rem对应多少px
+         * @param resetScaleFontSizeToDefault 是否重置Android因为系统放大或者缩小字体带来的影响
+         * @param useScaleFix1pxTooBold 是否通过meta标签的scale处理1px过于粗的问题
+         * */
+    </script>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <title>餐桌</title>
+</head>
+<body>
+<div id="m-dinTbe">
+    <div id="dinTable-body">
+        <div class="img-sequence" id="img-sequence">
+
+        </div>
+        <div class="goods-img">
+            <div class="goodsImage-div">
+                <ul class="goodsImage-ul" id="goodsImage-ul">
+
+                </ul>
+            </div>
+        </div>
+        <div class="goods-name">
+            <i class="iconfont">&#xe6aa;</i>
+            <div id="goods-name">
+
+            </div>
+        </div>
+        <div class="goods-price">
+            <span class="goodsPrice-describe">单价：</span>
+            <i class="iconfont">&#xe605;</i>
+            <span id="goods-price">
+
+            </span>
+        </div>
+        <div class="goods-count">
+            <span class="goodsCount-describe">数量：</span>
+            <i class="iconfont" id="minus">&#xe61a;</i>
+            <span id="goods-count">
+
+            </span>
+            <i class="iconfont" id="add">&#xe63c;</i>
+        </div>
+        <div class="settlement"><span>去结算</span></div>
+        <div class="left">&lt;</div>
+        <div class="right">&gt;</div>
+        <div class="overlap"></div>
+        <div class="paydetail">
+            <div class="all" id="all">
+
+            </div>
+            <ul class="goodsdetail" id="goodsdetail">
+
+            </ul>
+            <div class="paybtn">
+                <span>立即购买</span>
+            </div>
+        </div>
+        <div class="account">
+            <div class="needpay" id="needpay">
+
+            </div>
+            <div class="choose">
+                <span>请选择支付方式</span>
+            </div>
+            <div class="wechat">
+                <div class="left">
+                    <i class="iconfont icon-wechat">&#xe615;</i>
+                    <span>微信支付</span>
+                </div>
+                <div class="right">
+                    <i class="iconfont icon-right">&#xe641;</i>
+                </div>
+            </div>
+            <div class="surebtn">
+                <span>确认支付</span>
+            </div>
+        </div>
+        <div class="success">
+            <i class="iconfont">&#xe641;</i>
+            <span>支付成功！</span>
+        </div>
+    </div>
+    <div class="empty">
+        <div class="icon-cart">
+            <i class="iconfont">&#xe604;</i>
+        </div>
+        <div class="word1">
+            <span>购物车竟然是空的</span>
+        </div>
+        <div class="word2">
+            <span>再忙，也要记得买点什么犒劳自己~</span>
+        </div>
+    </div>
+    <div id="m-nav">
+        <div class="nav">
+            <li>
+                <a href="index.html">
+                    <i class="index-img1">&#xe737;</i>
+                    <p>首页</p >
+                </a>
+            </li>
+            <li>
+                <a href="classify.html">
+                    <i class="index-img2">&#xe603;</i>
+                    <p>发现</p >
+                </a>
+            </li>
+            <li>
+                <a href="#" class="icon-dinTable">
+                    <i class="index-img3">&#xe629;</i>
+                    <p>餐桌</p >
+                </a>
+            </li>
+            <li>
+                <a href=perCenter.html>
+                    <i class="index-img4">&#xe707;</i>
+                    <p>我的</p >
+                </a>
+            </li>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="./js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="./js/lib/velocity.min.js"></script>
+<script src="js/lib/handlebars-v4.0.10.js"></script>
+<script id="sequence-template" type="text/x-handlebars-template">
+    <span class="now-sequence">{{addOne number}}/</span>
+    <span class="img-count"></span>
+</script>
+<script id="image-template" type="text/x-handlebars-template">
+    {{#each this}}
+    <li><a href="detail.html?id={{id}}"><img src="{{goodImage}}"/></a></li>
+    {{/each}}
+</script>
+<script id="name-template" type="text/x-handlebars-template">
+    <span class="goodsName-span">{{name}}</span>
+</script>
+<script id="price-template" type="text/x-handlebars-template">
+    <span class="goodsPrice-value">{{price}}</span>
+</script>
+<script id="count-template" type="text/x-handlebars-template">
+    <span data-price="{{price}}" class="goodsCount-value">{{count}}</span>
+</script>
+<script id="all-template" type="text/x-handlebars-template">
+    <div class="all-price"></div>
+    <div class="all-count"></div>
+</script>
+<script id="detail-template" type="text/x-handlebars-template">
+    {{#each this}}
+    <li data-id={{goodsDetailId}}>
+        <span>{{name}} {{count}} X {{price}} 元</span>
+        <i class="iconfont" id="icon-choose">&#xe641;</i>
+    </li>
+    {{/each}}
+</script>
+<script id="needpay-template" type="text/x-handlebars-template">
+    <span class="needpay-span"></span>
+</script>
+<script type="text/javascript" src="./js/module/dinTable.js"></script>
+</html>
